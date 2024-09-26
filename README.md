@@ -11,4 +11,5 @@
 ##### 2-groups
 - this script prints all the groups the current user is part of.
 
-######
+###### 0-hello_world
+- this scripts prints 'Hello, World'
