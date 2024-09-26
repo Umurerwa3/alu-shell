@@ -15,4 +15,5 @@
 - this scripts prints 'Hello, World' using `echo` command
 
 ###### 1-confused_smiley
--prints a script that displays a cconfused smiley using `echo` command
+-prints a script that displays a cconfused smiley using `echo "\"(Ôo)'` command
+#####
