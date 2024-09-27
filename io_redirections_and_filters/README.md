@@ -16,4 +16,5 @@
 
 ###### 1-confused_smiley
 -prints a script that displays a cconfused smiley using `echo "\"(Ôo)'` command
-#####
+###### 11-directories 
+- counts the number of directories and sub-directories in the current directory. (excluding ., ..) including hidden d using `find -mindepth 1 -type d | wc -l or `find . -type d ! -path '.'! -path './..'| wc -l
