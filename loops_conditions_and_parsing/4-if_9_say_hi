@@ -1,4 +1,4 @@
-#!/usr/bin/env  bash
+#!/usr/bin/env bash
 # This script displays "Best School" 10 times, but on the 9th iteration, it also displays "Hi"
 
 i=1
