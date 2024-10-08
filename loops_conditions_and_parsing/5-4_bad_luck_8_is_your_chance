@@ -1,9 +1,5 @@
-#!/usr/bin/env bash 
-# This script loops from 1 to 10 and displays:
-# "bad luck" for the 4th iteration,
-# "good luck" for the 8th iteration,
-# "Best School" for all other iterations.
-
+#!/usr/bin/env bash
+#This scripts diplays "bad luck" on 4th iteration, "good luck" on 8th iteretion and "Best School" for other iterations
 
 i=1
 
@@ -13,7 +9,7 @@ while [ "$i" -lt 10 ]; do
 
        echo "bad luck"
 
-   elif [ $i -q 8 ]; then
+   elif [ $i -eq 8 ]; then
 
        echo "good luck"
 
