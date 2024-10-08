@@ -9,7 +9,7 @@ while [ "$i" -le 10 ]; do
 
        echo "bad luck"
 
-   elif [ $i -q 8 ]; then
+   elif [ $i -eq 8 ]; then
 
        echo "good luck"
 
