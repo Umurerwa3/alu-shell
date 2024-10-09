@@ -3,8 +3,14 @@
 # for each user in the /etc/passwd file using a while loop.
 
 while IFS=: read -r username _uid _ _ home _; do
+
+if [-n "$username" ]; then
+	
     echo "Username: $username"
     echo "User ID: $uid"
     echo "Home Directory: $home"
     echo
-done < /etc/passwd
+
+fi
+
+done </etc/passwd
