@@ -4,12 +4,14 @@
 hour=0
 
 while [ "$hour" -le 12 ]; do
+        
+	echo "hour: $hour"
 
     minute=1
 
     while [ "$minute" -le 59 ]; do
 
-        echo "$hour hour(s) and $minute minute(s)"
+        echo "$minute"
 
         minute=$((minute + 1))
 
