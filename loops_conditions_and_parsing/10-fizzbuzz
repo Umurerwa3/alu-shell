@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This script prints numbers from 1 to 100
+# It displays FizzBuzz for multiples of 3 and 5,
+# Fizz for multiples of 3, Buzz for multiples of 5,
+# and the number otherwise.
+
+number=1
+
+while [ $number -le 100 ]; do
+    if [ $((number % 3)) -eq 0 ] && [ $((number % 5)) -eq 0 ]; then
+        echo "FizzBuzz"
+    elif [ $((number % 3)) -eq 0 ]; then
+        echo "Fizz"
+    elif [ $((number % 5)) -eq 0 ]; then
+        echo "Buzz"
+    else
+        echo "$number"
+    fi
+    number=$((number + 1))  # Increment the number by 1
+done
+~                        
