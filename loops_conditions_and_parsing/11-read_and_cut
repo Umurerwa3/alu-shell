@@ -2,7 +2,7 @@
 # This script displays the username, user ID, and home directory path only ignoring other information
 # for each user in the /etc/passwd file using a while loop.
 
-while IFS=: read -r username - uid - - home -; do
+while IFS=: read -r username _uid _ _ home _; do
     echo "Username: $username"
     echo "User ID: $uid"
     echo "Home Directory: $home"
