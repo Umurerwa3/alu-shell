@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
-# This script lists the contents of the current directory in a list format
-# It only displays the part of the file name after the first dash (-)
-# Hidden files (those starting with .) are excluded
+# This script lists the contents of the current directory in a list format.
+# It only displays the part of the name after the first dash (-) for files and directories.
+# Hidden files (those starting with .) are excluded, and it includes special files.
 
-for file in *; do
-    # Only process non-hidden files
-    if [[ -f "$file" || -d "$file" ]]; then
-        # Check if the file name contains a dash (-)
-        if [[ "$file" == *-* ]]; then
-            # Cut and display the part of the name after the first dash (-)
-            echo "${file#*-}"
+for item in *; do
+    # Check if the item is not hidden and is either a regular file, a directory, or a special file
+    if [[ -e "$item" ]]; then
+        # If the item contains a dash (-), display the part after the first dash
+        if [[ "$item" == *-* ]]; then
+            echo "${item#*-}"
+        else
+            # If no dash, just display the item name
+            echo "$item"
         fi
     fi
 done
