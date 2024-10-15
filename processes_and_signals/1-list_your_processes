@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script displays all currently running processes for all users, including those without a TTY, in a hierarchical format.
 
-ps -e -o pid,uid,cmd --sort=uid
+ps -e -o pid,user,start,command
