@@ -1,30 +1,4 @@
 #!/usr/bin/env bash
-# Displays a list of currently running processes in a user-oriented format, including process hierarchy.
+# A script that displays a list of currently running processes.
 
-# Get the process list using ps command with necessary fields and headers
-ps aux --columns=USER,PID,CPU,MEM,VSZ,RSS,TTY,STAT,START,TIME,COMMAND --no-headers | awk '{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11}' > processes.txt
-
-# Function to print the process information with indentation for hierarchy
-print_process() {
-    local pid=$1
-    local indent=$2
-    local line=$(grep "^$pid" processes.txt)
-
-    # Print the process with indentation
-    printf "%s%s\n" "$indent" "$line"
-
-    # Recursively print child processes
-    while IFS=' ' read ppid pid _; do
-        if [[ $ppid -eq $pid ]]; then
-            print_process "$pid" "$indent  "
-        fi
-    done < processes.txt
-}
-
-# Iterate over the process list and print each process with hierarchy
-while IFS=' ' read user pid _; do
-    print_process "$pid" ""
-done < processes.txt
-
-# Remove the temporary file
-rm processes.txt
+ps -faux
