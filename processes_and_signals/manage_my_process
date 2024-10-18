@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
-# This script writes I am alive to the file /tmp/my_process indefinitely and wait for 2 seconds in between iterations
+#script that writes I am alive!
 
-while true, do
-
-echo "I am alive" > /tmp/my_process
-
-sleep 2
-
-done
-
+while true
+do 
+     echo "I am alive!" >> /tmp/my_process
+     sleep 2
+done 
